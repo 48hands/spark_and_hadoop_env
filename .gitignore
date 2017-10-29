@@ -6,4 +6,5 @@ project
 derby.log
 metastore_db
 .DS_Store
+vagrant/.vagrant
 
