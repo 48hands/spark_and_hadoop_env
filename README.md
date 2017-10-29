@@ -86,7 +86,7 @@ hdp-mst$ start-yarn.sh
 #### 6-2. インストール
 
 ローカルPCにJavaとSparkをインストールする。　　
-また、ローカルPCをクライアントとしてHadoopに接続するために、`brew`でhadoopをインストールする。
+また、ローカルPCをクライアントとしてHadoopに接続するために、`brew`でhadoopをインストールする。
 
 ```
 # Javaのインストール
