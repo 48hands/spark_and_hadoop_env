@@ -1,0 +1,7 @@
+hadoop-master:
+  name: hdp-mst
+  ip: 192.168.1.10
+  memory-size: 3072
+hadoop-slaves:
+  - {name: hdp-slv1, ip: 192.168.1.11, memory-size: 3072}
+  - {name: hdp-slv2, ip: 192.168.1.12, memory-size: 3072}

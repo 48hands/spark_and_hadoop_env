@@ -1,0 +1,15 @@
+<configuration>
+  <!-- 利用する分散ファイルシステムを指定 -->
+  <!-- 分散ファイルシステムとして、HDFSを利用 -->
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://<%= node["hadoop-master"]["name"] %>:8020</value>
+  </property>
+
+  <!-- HDFSやYARNで利用する一時ディレクトリ -->
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>/hadoop/tmp</value>
+  </property>
+
+</configuration>

@@ -1,0 +1,16 @@
+<configuration>
+
+  <!-- NameNodeがHDFS上のファイルのメタデータを保存するディレクトリを指定 -->
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///hadoop/hdfs/name</value>
+  </property>
+
+  <!-- DataNodeがブロックを保存するディレクトリを指定 -->
+  <!-- 全DataNodeｍｐこのディレクトリの容量の合計値/3(ブロックの複製数)がHDFSとして格納できるデータ量 -->
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>file:///hadoop/hdfs/data</value>
+  </property>
+
+</configuration>

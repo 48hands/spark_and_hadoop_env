@@ -1,0 +1,25 @@
+<configuration>
+
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value><%=node["hadoop-master"]["name"] %></value>
+  </property>
+
+  <!-- コンテナのログの格納先 -->
+  <property>
+    <name>yarn.nodemanager.log-dirs</name>
+    <value>file:///hadoop/yarn/node-manager/logs</value>
+  </property>
+
+  <!-- NodeManagerが利用するローカルディスクのパスを指定 -->
+  <property>
+    <name>yarn.nodemanager.local-dirs</name>
+    <value>file:///hadoop/yarn/node-manager/local</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.vmem-check-enabled</name>
+    <value>false</value>
+  </property>
+
+</configuration>
