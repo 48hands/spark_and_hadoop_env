@@ -3,10 +3,10 @@
 ## 構成
 
 | サーバ | OS | 台数 | Spark |YARN Resource | HDFS NameNode | YARN NodeManager | HDFS DataNode | Ruby Itamae |
-|:--|:--|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Hadoopマスター | CentOS7(64bit) | 1 | | ○ | ○ |
-| Hadoopスレーブ | CentOS7(64bit) | 2 | |  |  | ○ | ○ |
-| Local Mac | MacOS | 1 | ○ | |  |  |  | ○ | ○ | ○ | ○ |
+|:--|:--|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Hadoopマスター | CentOS7(64bit) | 1 | | ○ | ○ |   |   |   |
+| Hadoopスレーブ | CentOS7(64bit) | 2 | |   |   | ○ | ○ |   |
+| Local Mac | MacOS | 1 | ○ | |  |  |  | ○ |
 
 
 ## 環境構築方法の方針
