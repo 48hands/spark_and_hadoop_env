@@ -29,7 +29,7 @@ local$ vagrant up
 
 ### 2. Vagrantアカウントでitamaeインストールするための秘密鍵情報を登録する
 
-ローカル環境で以下のコマンドを実行
+ローカル環境で以下のコマンドを実行
 
 ```
 local$ vagrant ssh-config >> ~/.ssh/config
@@ -85,14 +85,14 @@ hdp-mst$ start-yarn.sh
 
 #### 6-2. インストール
 
-ローカルPCにJavaとSparkをインストールする。  
-また、ローカルPCをクライアントとしてHadoopに接続するために、`brew`でhadoopをインストールする。
+ローカルPCにJavaとSparkをインストールする。　　
+また、ローカルPCをクライアントとしてHadoopに接続するために、`brew`でhadoopをインストールする。
 
 ```
 # Javaのインストール
 localPC$ brew cask install java
 
-# Hadoopのインストール
+# Hadoopのインストール
 localPC$ brew install hadoop
 
 # Sparkのインストール
@@ -103,7 +103,7 @@ localPC$ tar xvfz spark-2.2.0-bin-hadoop2.7.tgz
 localPC$ ln -s /tmp/spark-2.2.0-bin-hadoop2.7 /tmp/spark
 ```
 
-#### 6-3. Hadoopの設定
+#### 6-3. Hadoopの設定
 
 ローカルPCの`core-site.xml`, `yarn-site.xml`ファイルを編集して以下の設定をいれる
 
@@ -142,7 +142,7 @@ localPC$ echo 'export HADOOP_USER_NAME=hadoop' >> ~/.bashrc
 
 #### 6-4. Sparkの設定
 
-HDFSにディレクトリ作成
+HDFSにディレクトリ作成
 
 ```
 localPC$ hdfs dfs -mkdir /spark-logs
@@ -180,7 +180,7 @@ localPC$ echo 'export PATH=$PATH:$SPARK_HOME/bin' >> ~/.bashrc
 
 ### 7. 動作確認
 
-`spark-shell`を起動して、yarnに接続できることを確認する。以下のような表示であればOK。
+`spark-shell`を起動して、yarnに接続できることを確認する。以下のような表示であればOK。
 
 ```
 localPC$ spark-shell --master yarn --deploy-mode client
