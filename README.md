@@ -11,8 +11,8 @@
 
 ## 環境構築方法の方針
 
-環境構築ツールとして、`itamae` を利用して、VitualBox上にHadoopサーバ、ローカルにSparkをインストールする。
-ローカル環境には、「brew」,「Ruby＋Itamae」は既にインストールされてるものとする。
+環境構築ツールとして、Itamaeを利用して、VitualBox上にHadoopサーバ、ローカルにSparkをインストールする。
+ローカル環境には、「brew」, 「Vagrant」, 「VirtualBox」, 「Ruby＋Itamae」は既にインストールされてるものとする。
 
 
 ## 開発環境構築
