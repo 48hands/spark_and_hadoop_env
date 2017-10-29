@@ -1,0 +1,34 @@
+
+require 'yaml'
+
+server_info = YAML.load_file('../node.yml')
+hadoop_master = server_info["hadoop-master"]
+hadoop_slaves = server_info["hadoop-slaves"]
+
+Vagrant.configure("2") do |config|
+
+  # Setting for Hadoop master
+  config.vm.define hadoop_master["name"] do |node|
+    node.vm.provider "virtualbox" do |vm|
+      vm.name = hadoop_master["name"]
+      vm.customize ["modifyvm", :id, "--memory", hadoop_master["memory-size"]]
+    end
+    node.vm.box = "centos/7"
+    node.vm.hostname = hadoop_master["name"]
+    node.vm.network "private_network", ip: hadoop_master["ip"]
+  end
+
+  # Setting for Hadoop slaves
+  hadoop_slaves.each do |slave|
+    config.vm.define slave["name"] do |node|
+      node.vm.provider "virtualbox" do |vm|
+        vm.name = slave["name"]
+        vm.customize ["modifyvm", :id, "--memory", slave["memory-size"]]
+      end
+      node.vm.box = "centos/7"
+      node.vm.hostname = slave["name"]
+      node.vm.network "private_network", ip: slave["ip"]
+    end
+  end
+
+end
