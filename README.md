@@ -1,4 +1,4 @@
-# ローカル環境構築手順
+# ローカル開発用 Spark/Hadoop分散環境構築手順
 
 ## 構成
 
@@ -27,7 +27,7 @@ local$ vagrant up
 ```
 
 
-### 2. Vagrantアカウントでitamaeインストールするための秘密鍵情報を登録する
+### 2. VagrantアカウントでItamaeインストールするための秘密鍵情報を登録する
 
 ローカル環境で以下のコマンドを実行
 
@@ -48,7 +48,7 @@ local$ itamae ssh -h hdp-slv2 cookbooks/hadoop-common.rb -y node.yml
 
 
 
-### 4. hadoopマスターノードにログインしてNamenodeを初期化
+### 4. HadoopマスターノードにログインしてNamenodeを初期化
 
 ```
 local$ ssh hdp-mst
